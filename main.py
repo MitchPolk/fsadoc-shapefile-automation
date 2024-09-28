@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-from pyproj import Transformer
 import geopandas as gpd
 from shapely.geometry import Polygon
 
