@@ -1,5 +1,6 @@
 # Automated Conversion of FSA Document to Shapefiles
 This is an implementation of an automated approach to converting FSA files of farmland tracts into geo-referenced ShapeFiles using Python.
+
 <img width="521" alt="Screenshot 2024-09-27 at 2 58 23 PM" src="https://github.com/user-attachments/assets/a754af40-35b4-41e7-b985-c8125d7468d9">
 
 ## This repository includes:
