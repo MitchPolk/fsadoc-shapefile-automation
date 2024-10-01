@@ -94,7 +94,7 @@ def transform_point(point, affine_matrix):
     transformed_pt = np.dot(affine_matrix, pt)
     return transformed_pt[0], transformed_pt[1]
 
-# Step 1: Loop through contours and transform each point from image to GPS coordinates
+# Loop through contours and transform each point from image to GPS coordinates
 polygons = []
 for contour in contours:
     # Transform each point in the contour
@@ -103,11 +103,11 @@ for contour in contours:
     polygon = Polygon(gps_points)
     polygons.append(polygon)
 
-# Step 2: Create a GeoDataFrame with the polygons
+# Create a GeoDataFrame with the polygons
 gdf = gpd.GeoDataFrame(geometry=polygons)
 
 # Set the CRS (Coordinate Reference System) to WGS84 (EPSG:4326 for latitude/longitude)
 gdf.set_crs("EPSG:4326", inplace=True)
 
-# Step 3: Save the polygons as a shapefile
+# Save the polygons as a shapefile
 gdf.to_file("defaultkernels_shapefile.shp")
