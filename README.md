@@ -42,7 +42,7 @@ The figures folder contains a couple exported figures from matplotlib, containin
 ### Inputs and Outputs
 - The original image, as sent to me, was a .heic photo of a printed USDA FSA document file. I manually converted it to a .jpeg using an online converter. This image is not included for privacy purposes.
 
-- After a few tries with `main.py`, I learned that the surrounding white portions of the paper document were being included in the yellow HSV color range and kept in the mask. While this could potentially be cleaned in the morphological processes, I thought it simpler to simply remove the opportunity for error here. Therefore, I cropped the image to include just the yellow bounded region, tightening the cropped boundary as much as I could. A tighter crop DOES NOT increase the success of the process, plenty of green space can be kept as long as the color values do not closely resemble yellow.
+- After a few tries with `main.py`, I learned that the surrounding white portions of the paper document were being included in the yellow HSV color range and kept in the mask. While this could potentially be cleaned in the morphological processes, I thought it simpler to remove the opportunity for error here. Therefore, I cropped the image to include just the yellow bounded region, tightening the cropped boundary as much as I could. A tighter crop DOES NOT increase the success of the process, plenty of green space can be kept as long as the color values do not closely resemble yellow.
   
 ## Future Directions and Further Uses:
 - If you wanted to keep certain regions and exclude others, you could manually make edits to the input image, drawing yellow around the desired regions and covering with black the yellow boundaries you don't want to keep. 
