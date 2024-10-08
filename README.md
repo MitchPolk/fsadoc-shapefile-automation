@@ -43,8 +43,7 @@ The figures folder contains a couple exported figures from matplotlib, containin
 - The original image, as sent to me, was a .heic photo of a printed USDA FSA document file. I manually converted it to a .jpeg using an online converter. This image is not included for privacy purposes.
 
 - After a few tries with `main.py`, I learned that the surrounding white portions of the paper document were being included in the yellow HSV color range and kept in the mask. While this could potentially be cleaned in the morphological processes, I thought it simpler to simply remove the opportunity for error here. Therefore, I cropped the image to include just the yellow bounded region, tightening the cropped boundary as much as I could. A tighter crop DOES NOT increase the success of the process, plenty of green space can be kept as long as the color values do not closely resemble yellow.
-![The original, uncropped input](./Inputs/FSA_Plot_CROPPED.jpg)
-
+  
 ## Future Directions and Further Uses:
 - If you wanted to keep certain regions and exclude others, you could manually make edits to the input image, drawing yellow around the desired regions and covering with black the yellow boundaries you don't want to keep. 
 What that will do though is redefine the corners of the image, requiring some edits to the code. Logic would need to be added that maps the edited image to recalculated gps coordinates according to the new yellow boundaries. This would also require that the input is cropped so that 3 corners of the image are as close as possible to 3 provided GPS coordinates in the real-world. These will need to be accurate when recalculating the edited gps coordinates and corner pixels locations.
